@@ -14,7 +14,7 @@ namespace CIEES.Models
         public int ArchivoId { get; set; }
         public string Nombre { get; set; }
         public string Ruta { get; set; }
-        public string IdTabla { get; set; }
+        public string TablaId { get; set; }
         public DateTime F_Mod { get; set; }
     }
 }

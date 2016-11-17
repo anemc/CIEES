@@ -17,7 +17,7 @@ namespace CIEES.Models
         public string Recursos { get; set; }
         public string Falta_Rec { get; set; }
         public string Insuficiencia { get; set; }
-        public int IdUsuario { get; set; }
+        public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
         public DateTime f_Mod { get; set; }
     }

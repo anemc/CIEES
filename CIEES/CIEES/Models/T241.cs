@@ -14,7 +14,7 @@ namespace CIEES.Models
         public int T241Id { get; set; }
         public string Actividades { get; set; }
         public string Valoracion { get; set; }
-        public int IdUsuario { get; set; }
+        public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
         public DateTime f_Mod { get; set; }
     }

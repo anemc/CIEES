@@ -17,7 +17,7 @@ namespace CIEES.Models
         public string Lengua_Apoyo { get; set; }
         public string Lengua_Pertenen { get; set; }
         public string Suficiencia { get; set; }
-        public int IdUsuario { get; set; }
+        public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
         public DateTime f_Mod { get; set; }
     }

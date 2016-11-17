@@ -20,7 +20,7 @@ namespace CIEES.Models
         public string Resp2 { get; set; }
         public string Resp3 { get; set; }
         public string Resp4 { get; set; }
-        public int IdUsuario { get; set; }
+        public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
         public DateTime f_Mod { get; set; }
 

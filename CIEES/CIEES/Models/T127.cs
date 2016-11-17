@@ -18,7 +18,7 @@ namespace CIEES.Models
         public string Ambiente { get; set; }
         public string Fortalezas { get; set; }
         public string Mejoras { get; set; }
-        public int IdUsuario { get; set; }
+        public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
         public DateTime f_Mod { get; set; }
     }

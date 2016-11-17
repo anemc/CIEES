@@ -16,7 +16,7 @@ namespace CIEES.Models
         public string Cobertura { get; set; }
         public string Pertenencia { get; set; }
         public string Perfil { get; set; }
-        public int IdUsuario { get; set; }
+        public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
         public DateTime f_Mod { get; set; }
     }
