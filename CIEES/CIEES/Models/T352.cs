@@ -16,6 +16,7 @@ namespace CIEES.Models
         public string Tabla_Asp { get; set; }       //archivo
         public string Ingreso { get; set; }
         public string Val1 { get; set; }
+        [Display(Name = "Usuario")]
         public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
         public DateTime f_Mod { get; set; }

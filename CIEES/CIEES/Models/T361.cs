@@ -17,8 +17,9 @@ namespace CIEES.Models
         public string Asignaturas { get; set; }
         public string Justificacion { get; set; }
         public string Solucion { get; set; }
+        [Display(Name = "Usuario")]
         public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
-        public DateTime f_Mod { get; set; }
+        public DateTime F_Mod { get; set; }
     }
 }

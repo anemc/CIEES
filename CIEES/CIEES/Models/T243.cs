@@ -17,8 +17,9 @@ namespace CIEES.Models
         public string Certificacion_Resul { get; set; }
         public string Fortalezas { get; set; }      //sin contador
         public string Mejoras { get; set; }         //sin contador
+        [Display(Name = "Usuario")]
         public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
-        public DateTime f_Mod { get; set; }
+        public DateTime F_Mod { get; set; }
     }
 }

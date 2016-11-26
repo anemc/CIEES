@@ -12,12 +12,13 @@ namespace CIEES.Models
     {
         [Key]
         public int T493ID { get; set; }
-        public int UsuarioId { get; set; }
         public string Superacion { get; set; }
         public string Procedimiento { get; set; }
         public string Profesor1 { get; set; }    //sin contador 
         public string Profesor2 { get; set; }   //sin contador 
-        public string Resultador { get; set; }   
+        public string Resultador { get; set; }
+        [Display(Name = "Usuario")]
+        public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
         public DateTime F_Mod { get; set; }
     }

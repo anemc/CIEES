@@ -16,8 +16,9 @@ namespace CIEES.Models
         public string Estrategia_Imp { get; set; }
         public string Mecanismo { get; set; }
         public string Estrategia_Usada { get; set; }
+        [Display(Name = "Usuario")]
         public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
-        public DateTime f_Mod { get; set; }
+        public DateTime F_Mod { get; set; }
     }
 }

@@ -15,8 +15,9 @@ namespace CIEES.Models
         public string Curricula { get; set; }       //sin contador
         public string Asignaturas { get; set; }     //sin contador
         public string Curricula_Mej { get; set; }   //sin contador
+        [Display(Name = "Usuario")]
         public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
-        public DateTime f_Mod { get; set; }
+        public DateTime F_Mod { get; set; }
     }
 }

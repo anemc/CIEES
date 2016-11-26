@@ -12,9 +12,14 @@ namespace CIEES.Models
     {
         [Key]
         public int T492Id { get; set; }
-
+        public string Reglamento { get; set; }
+        public string Descripcion1 { get; set; }
+        public string Descripcion2 { get; set; }
+        public string Valor1 { get; set; }
+        public string Valor2 { get; set; }
+        public string Valor3 { get; set; }
         public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
-        public DateTime f_Mod { get; set; }
+        public DateTime F_Mod { get; set; }
     }
 }

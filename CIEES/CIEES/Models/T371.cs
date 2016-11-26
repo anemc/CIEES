@@ -16,8 +16,9 @@ namespace CIEES.Models
         public string Tabla_Titulos { get; set; }   //archivo
         public string Valoracion { get; set; }
         public string Docentes { get; set; }
+        [Display(Name = "Usuario")]
         public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
-        public DateTime f_Mod { get; set; }
+        public DateTime F_Mod { get; set; }
     }
 }

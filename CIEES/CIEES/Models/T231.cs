@@ -16,8 +16,9 @@ namespace CIEES.Models
         public string Modelo_Apl { get; set; }
         public string Modelo_Compat { get; set; }
         public string Modelo_Doc { get; set; }
+        [Display(Name = "Usuario")]
         public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
-        public DateTime f_Mod { get; set; }
+        public DateTime F_Mod { get; set; }
     }
 }

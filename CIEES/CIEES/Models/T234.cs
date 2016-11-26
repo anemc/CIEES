@@ -16,8 +16,9 @@ namespace CIEES.Models
         public string Proced_Eval { get; set; }
         public string Asignatura { get; set; }
         public string Resul_Alc { get; set; }
+        [Display(Name = "Usuario")]
         public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
-        public DateTime f_Mod { get; set; }
+        public DateTime F_Mod { get; set; }
     }
 }
