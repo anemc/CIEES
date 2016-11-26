@@ -13,7 +13,7 @@ namespace CIEES
     {
         private static MyDbContext db;
 
-        public static MyDbContext Ejemplo1Context
+        public static MyDbContext CIEESContext
         {
             get
             {
@@ -35,7 +35,7 @@ namespace CIEES
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            var db = Utils.Ejemplo1Context;
+            var db = Utils.CIEESContext;
         }
     }
 }

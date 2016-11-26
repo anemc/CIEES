@@ -7,7 +7,7 @@ using System.Web;
 
 namespace CIEES.Models
 {
-    [Table("")]
+    [Table("Tables")]
     public class Tables
     {
         [Key]
