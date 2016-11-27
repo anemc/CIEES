@@ -62,3 +62,14 @@
 }
 
 </table>
+
+<select class="form-control" id="sel1" style="width:500px">
+    @foreach (var item in Model)
+    {
+            <option>@Html.DisplayFor(modelItem => item.Nombre)</option>
+    }
+</select>
+
+<div>
+    @Html.DropDownList("Users", (SelectList) ViewBag.Users, "Selecciona un nombre")
+</div>
