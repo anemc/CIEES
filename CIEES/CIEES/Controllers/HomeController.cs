@@ -23,7 +23,8 @@ namespace CIEES.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
+            var db = Utils.CIEESContext;
+            db.Tables.Add(new Models.Tables() { Nombre = "T111" });
             return View();
         }
     }
