@@ -188,6 +188,7 @@
     <Compile Include="Models\T491.cs" />
     <Compile Include="Models\T492.cs" />
     <Compile Include="Models\T493.cs" />
+    <Compile Include="Models\T494.cs" />
     <Compile Include="Models\T495.cs" />
     <Compile Include="Models\T496.cs" />
     <Compile Include="Models\T497.cs" />

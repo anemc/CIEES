@@ -13,15 +13,12 @@ namespace CIEES.Models
         [Key]
         public int T494Id { get; set; }
         public string Procedimiento { get; set; }
-        public string Convenio { get; set; }
+        public string Convenios { get; set; }
         public string Valor { get; set; }
         public string Obstaculos { get; set; }
         [Display(Name = "Usuario")]
         public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
         public DateTime F_Mod { get; set; }
-
-        [ForeignKey("UsuarioId")]
-        public virtual IEnumerable<Users> User { get; set; }
     }
 }
