@@ -7,15 +7,15 @@ using System.Web;
 
 namespace CIEES.Models
 {
-    [Table("T497")]
-    public class T497
+    [Table("T493")]
+    public class T493
     {
         [Key]
-        public int T497ID { get; set; }
-        public string Lista { get; set; } //sin contador
-        public string Lineamientos { get; set; }
-        public string Valor { get; set; }    
-       
+        public int T493ID { get; set; }
+        public string Programa { get; set; }
+        public string Procedimiento { get; set; }
+        public string Condiciones { get; set; }    
+        
         [Display(Name = "Usuario")]
         public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }

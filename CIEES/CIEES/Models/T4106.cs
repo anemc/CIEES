@@ -7,16 +7,16 @@ using System.Web;
 
 namespace CIEES.Models
 {
-    [Table("T498")]
-    public class T498
+    [Table("T4106")]
+    public class T4106
     {
         [Key]
-        public int T498ID { get; set; }
-        public string Programa { get; set; }
-        public string Academicos { get; set; }   //sin contador
-        public string Relacion { get; set; }     
-        public string Investigacion { get; set; }  
-        
+        public int T4106ID { get; set; }
+        public string Espacios { get; set; }
+        public string Procedimiento { get; set; }
+        public string Valoracion { get; set; }    
+        public string Fortalezas { get; set; }    //sin contador 
+        public string Mejoras { get; set; }
         [Display(Name = "Usuario")]
         public int UsuarioId { get; set; }
         public DateTime F_Lim { get; set; }
