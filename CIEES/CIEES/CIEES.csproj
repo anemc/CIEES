@@ -190,6 +190,9 @@
     <Compile Include="Models\T493.cs" />
     <Compile Include="Models\T495.cs" />
     <Compile Include="Models\T496.cs" />
+    <Compile Include="Models\T497.cs" />
+    <Compile Include="Models\T498.cs" />
+    <Compile Include="Models\T499.cs" />
     <Compile Include="Models\Tables.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
