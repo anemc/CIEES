@@ -15,7 +15,7 @@ namespace CIEES.Models
         public string Servicios { get; set; }
         public string Software { get; set; }   //sin contador
         public string Procedimientos { get; set; }
-        public string Servicios { get; set; }
+        public string Servicios2 { get; set; }
         public string Capacidad { get; set; }
         public string Fortalezas { get; set; }
         public string Mejora { get; set; }
