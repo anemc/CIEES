@@ -11,7 +11,7 @@ namespace CIEES.Models
     public class T497
     {
         [Key]
-        public int T497ID { get; set; }
+        public int T497Id { get; set; }
         public string Lista { get; set; } //sin contador
         public string Lineamientos { get; set; }
         public string Valor { get; set; }    

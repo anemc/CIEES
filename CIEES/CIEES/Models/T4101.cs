@@ -11,7 +11,7 @@ namespace CIEES.Models
     public class T4101
     {
         [Key]
-        public int T4101ID { get; set; }
+        public int T4101Id { get; set; }
         public string Aulas { get; set; }     //sin contador
         public string Caracteristicas { get; set; }
         public string Condiciones { get; set; }     
@@ -22,4 +22,4 @@ namespace CIEES.Models
         public DateTime F_Lim { get; set; }
         public DateTime F_Mod { get; set; }
     }
-}}
+}

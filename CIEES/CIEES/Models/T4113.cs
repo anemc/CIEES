@@ -11,7 +11,7 @@ namespace CIEES.Models
     public class T493
     {
         [Key]
-        public int T493ID { get; set; }
+        public int T493Id { get; set; }
         public string Programa { get; set; }
         public string Procedimiento { get; set; }
         public string Condiciones { get; set; }    

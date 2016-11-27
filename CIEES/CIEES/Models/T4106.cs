@@ -11,7 +11,7 @@ namespace CIEES.Models
     public class T4106
     {
         [Key]
-        public int T4106ID { get; set; }
+        public int T4106Id { get; set; }
         public string Espacios { get; set; }
         public string Procedimiento { get; set; }
         public string Valoracion { get; set; }    

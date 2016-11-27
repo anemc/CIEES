@@ -11,7 +11,7 @@ namespace CIEES.Models
     public class T4111
     {
         [Key]
-        public int T4111ID { get; set; }
+        public int T4111Id { get; set; }
         public string Caract { get; set; }
         public string Condiciones { get; set; }
        

@@ -11,7 +11,7 @@ namespace CIEES.Models
     public class T4102
     {
         [Key]
-        public int T4102ID { get; set; }
+        public int T4102Id { get; set; }
         public string Asignaturas { get; set; }    //sin contador
         public string Espacios { get; set; }       //sin contador
         public string Caracteristicas { get; set; }    //sin contador 

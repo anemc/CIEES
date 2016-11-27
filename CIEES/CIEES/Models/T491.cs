@@ -11,7 +11,7 @@ namespace CIEES.Models
     public class T481
     {
         [Key]
-        public int T481Id { get; set; }
+        public int T491Id { get; set; }
         public string Total_Prof { get; set; }  // sin contador
         public string Descrip1 { get; set; }
         public string Descrip2 { get; set; }

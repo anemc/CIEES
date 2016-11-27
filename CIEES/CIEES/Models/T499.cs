@@ -11,7 +11,7 @@ namespace CIEES.Models
     public class T499
     {
         [Key]
-        public int T499ID { get; set; }
+        public int T499Id { get; set; }
         public string Posgrado { get; set; }      //sin contador
         public string Nombre { get; set; }       //sin contador
         public string Investigacion { get; set; }     

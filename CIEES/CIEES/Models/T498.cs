@@ -11,7 +11,7 @@ namespace CIEES.Models
     public class T498
     {
         [Key]
-        public int T498ID { get; set; }
+        public int T498Id { get; set; }
         public string Programa { get; set; }
         public string Academicos { get; set; }   //sin contador
         public string Relacion { get; set; }     

@@ -11,7 +11,7 @@ namespace CIEES.Models
     public class T493
     {
         [Key]
-        public int T493ID { get; set; }
+        public int T493Id { get; set; }
         public string Superacion { get; set; }
         public string Procedimiento { get; set; }
         public string Profesor1 { get; set; }    //sin contador 
