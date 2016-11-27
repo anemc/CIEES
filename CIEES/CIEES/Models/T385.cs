@@ -8,7 +8,7 @@ using System.Web;
 namespace CIEES.Models
 {
     [Table("T385")]
-    public class t385
+    public class T385
     {
         [Key]
         public int T385Id { get; set; }
