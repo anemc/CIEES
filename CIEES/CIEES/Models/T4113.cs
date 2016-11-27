@@ -7,11 +7,11 @@ using System.Web;
 
 namespace CIEES.Models
 {
-    [Table("T493")]
-    public class T493
+    [Table("T4113")]
+    public class T4113
     {
         [Key]
-        public int T493Id { get; set; }
+        public int T4113Id { get; set; }
         public string Programa { get; set; }
         public string Procedimiento { get; set; }
         public string Condiciones { get; set; }    
