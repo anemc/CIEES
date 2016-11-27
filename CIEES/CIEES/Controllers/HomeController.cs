@@ -12,20 +12,5 @@ namespace CIEES.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-            var db = Utils.CIEESContext;
-            db.Tables.Add(new Models.Tables() { Nombre = "T111" });
-            return View();
-        }
     }
 }
