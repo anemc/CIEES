@@ -1,0 +1,38 @@
+﻿@model CIEES.Models.Users
+
+@{
+    ViewBag.Title = "Modificar Contraseña";
+}
+
+<center><h2>Modificar Contraseña</h2></center>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Usuario)
+        </dd>
+    </dl>
+</div>
+@using (Html.BeginForm("Modpass", "Users", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+        <div class="form-group">
+            @Html.LabelFor(model => model.Contrasena, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Contrasena, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Contrasena, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </div>
+}
+<p>
+    @Html.ActionLink("Volver", "Lista")
+</p>

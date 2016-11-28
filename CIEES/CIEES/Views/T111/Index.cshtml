@@ -1,0 +1,114 @@
+﻿@model CIEES.Models.T111
+
+@{
+    ViewBag.Title = "T1.1.1";
+}
+
+<center>
+    <h1>EJE 1. Fundamentos y condiciones de operación</h1>
+    <h2>Categoría 1. Propósitos del programa Misión y visión</h2>
+    <h3>1.1.1) Misión y visión del programa</h3>
+</center>
+
+@using (Html.BeginForm("Index", "T111", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.T111Id)
+
+        <div class="form-group">
+            <h4>A)	Descripción</h4><br />
+            <p>La misión y la visión de un programa son la guía que permite dar claridad, orden, sentido y cohesión a todos los elementos que integran el programa. Son el para qué y el rumbo de un programa, en función del cumplimiento de los objetivos sustantivos de la propia institución; la misión tiene relación con el cumplimiento de los objetivos y metas establecidas en la formación profesional de cuadros especializados en determinadas disciplinas.</p>
+            <h4>B)	Instrucción</h4><br />
+            <p>1.	Transcriba la misión y la visión (si existen) del programa educativo y/o sus objetivos. (sin máximo de palabras).</p>
+            @Html.LabelFor(model => model.Mision, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Mision, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Mision, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Vision, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Vision, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Vision, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Objetivos, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Objetivos, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Objetivos, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <p>2.	Especifique cuándo y por quién fue aprobado el documento que contiene la misión, visión u objetivos. No es válido incluir misión y visión institucionales, departamentales, etc. (sin máximo de palabras).</p>
+            @Html.LabelFor(model => model.F_Aprob, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.F_Aprob, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.F_Aprob, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4>C)	Valoración o comentarios del equipo elaborador</h4><br />
+            <p>1.	Describa cómo la misión, visión y/u objetivos promueven acciones específicas que realiza la coordinación del programa. (máximo 150 palabras). </p>
+            @Html.LabelFor(model => model.Resp1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Resp1, new { htmlAttributes = new { @class = "form-control " } })
+                @Html.ValidationMessageFor(model => model.Resp1, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <p>2.	Analice la congruencia entre la misión, visión y/u objetivos del programa con los objetivos del plan de estudios y su perfil de egreso. (máximo 150 palabras).</p>
+            @Html.LabelFor(model => model.Resp2, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Resp2, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Resp2, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <p>3.	Valore cómo se articulan estos tres elementos (misión, visión, objetivos del programa) en el desarrollo del programa. (máximo 150 palabras).</p>
+            @Html.LabelFor(model => model.Resp3, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Resp3, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Resp3, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <p>4.	Explique cómo verifica el cumplimiento de la visión y la misión. (máximo 150 palabras).</p>
+            @Html.LabelFor(model => model.Resp4, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Resp4, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Resp4, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4>D)	Documentos.  Adjuntar en formato PDF.</h4><br />
+            <p>
+                •	Documentos oficiales con la misión y visión o los objetivos del programa.<br />
+                •	Ejemplos de los medios de comunicación interna y externa de la misión y de la visión (por ejemplo, folletos, carteles, trípticos, sitio web, etcétera).
+            </p>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Volver", "Autoevaluacion", "Otras")
+</div>

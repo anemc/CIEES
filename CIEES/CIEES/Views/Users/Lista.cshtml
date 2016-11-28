@@ -1,9 +1,9 @@
 ﻿@model IEnumerable<CIEES.Models.Users>
 
 @{
-    ViewBag.Title = "Lista";
+    ViewBag.Title = "Control de Usuarios";
 }
-<h2>Lista de Usuarios</h2>
+<center><h2>Lista de Usuarios</h2></center>
 
     <p style="text-align:right">
         @Html.ActionLink("Nuevo Usuario", "Nuevo")
@@ -24,6 +24,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Contrasena)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correo)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Tipo)
@@ -49,12 +52,15 @@
             @Html.DisplayFor(modelItem => item.Contrasena)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Correo)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Tipo)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.UsuarioId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.UsuarioId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.UsuarioId })
+            @Html.ActionLink("Editar", "Editar", new { id=item.UsuarioId }) |
+            @Html.ActionLink("Detalles", "Detalles", new { id=item.UsuarioId }) |
+            @Html.ActionLink("Eliminar", "Borrar", new { id=item.UsuarioId })
         </td>
     </tr>
 }

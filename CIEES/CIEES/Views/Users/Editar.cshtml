@@ -1,18 +1,20 @@
 ﻿@model CIEES.Models.Users
 
 @{
-    ViewBag.Title = "Usuario Nuevo";
+    ViewBag.Title = "Editar";
 }
 
-<center><h2>Nuevo Usuario</h2></center>
+<center><h2>Editar Usuario</h2></center>
 
-@using (Html.BeginForm("Guardar", "Users", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Editar", "Users", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
+    <div class="form-horizontal" style="margin-left:30%">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.UsuarioId)
+
         <div class="form-group">
             @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -46,14 +48,6 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Contrasena, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Contrasena, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Contrasena, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
             @Html.LabelFor(model => model.Correo, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control" } })
@@ -71,7 +65,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Crear Usuario" class="btn btn-default" />
+                <input type="submit" value="Guardar" class="btn btn-primary" />
             </div>
         </div>
     </div>

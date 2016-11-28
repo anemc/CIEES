@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CIEES.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,8 +12,15 @@ namespace CIEES.Controllers
         // GET: Dates
         public ActionResult Fechas()
         {
-            
             return View();
+        }
+
+        public ActionResult Guardar(Dates d)
+        {
+            var db = Utils.CIEESContext;
+            db.Dates.Add(d);
+            db.SaveChanges();
+            return RedirectToAction("Autoevaluacion", "Otras");
         }
     }
 }

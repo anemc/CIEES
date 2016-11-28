@@ -12,9 +12,9 @@ namespace CIEES.Models
     {
         [Key]
         public int FechaId { get; set; }
-        [Display(Name = "Inicio de Semestre")]
+        [Display(Name = "Inicio de Semestre"), DataType(DataType.Date)]
         public DateTime Ini_Sem { get; set; }
-        [Display(Name = "Final de Semestre")]
+        [Display(Name = "Final de Semestre"), DataType(DataType.Date)]
         public DateTime Fin_Sem { get; set; }
         public int Aler_Sem { get; set; }
         public int Aler_Lim { get; set; }
