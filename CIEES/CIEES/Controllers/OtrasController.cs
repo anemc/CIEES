@@ -6,12 +6,11 @@ using System.Web.Mvc;
 
 namespace CIEES.Controllers
 {
-    public class HomeController : Controller
+    public class OtrasController : Controller
     {
-        public ActionResult Index()
+        // GET: Otras
+        public ActionResult Autoevaluacion()
         {
-            var db = Utils.CIEESContext;
-            db.Tables.Add(new Models.Tables { Nombre = "T111" });
             return View();
         }
     }

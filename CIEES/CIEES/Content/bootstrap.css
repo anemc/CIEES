@@ -220,8 +220,22 @@ textarea {
 }
 
 table {
-  border-collapse: collapse;
+  border:double;
+  border-color: #3fa4f1;
   border-spacing: 0;
+  text-align:center
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+#customers tr:hover {background-color: #9ad6f1;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #64289a;
+    color: white;
 }
 
 @media print {
@@ -3833,7 +3847,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .nav > li.disabled > a:hover,
 .nav > li.disabled > a:focus {
-  color: #999999;
+  color: #fff;
   text-decoration: none;
   cursor: not-allowed;
   background-color: transparent;
@@ -4501,7 +4515,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #222222;
+  background-color: #2a9aee;
   border-color: #080808;
 }
 
@@ -4520,13 +4534,15 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #999999;
+  color: #fff;
+  font-weight:bold;
+  font-size:large;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #ffffff;
-  background-color: transparent;
+  color: #333333;
+  background-color: #1984BC;
 }
 
 .navbar-inverse .navbar-nav > .active > a,
@@ -6814,3 +6830,25 @@ td.visible-print {
     display: none !important;
   }
 }
+
+<!--                                     -->
+
+
+#menu * { 
+    list-style:none;
+}
+#menu li{ 
+    line-height:180%;
+}
+#menu li li{
+}
+#menu li a{color:#222; text-decoration:none;}
+#menu li a:before{ content:"\025b8"; color:#ddd; margin-right:4px;}
+#menu input[name="list"] {
+	position: absolute;
+	left: -1000em;
+	}
+#menu label:before{ content:"\025b8"; margin-right:4px;}
+#menu input:checked ~ label:before{ content:"\025be";}
+#menu .interior{display: none;}
+#menu input:checked ~ ul{display:block;}

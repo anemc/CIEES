@@ -26,9 +26,10 @@ namespace CIEES.Controllers
 
         public ActionResult Lista()
         {
-            var l = from x in Utils.CIEESContext.Users select x;
-
-            return View(l);
+            var m = from x in Utils.CIEESContext.Users select x;
+            return View(m);
         }
+
+        
     }
 }

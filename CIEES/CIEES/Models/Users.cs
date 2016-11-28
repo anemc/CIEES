@@ -18,7 +18,7 @@ namespace CIEES.Models
         [Display(Name = "Apellido Materno")]
         public string ApellidoM { get; set; }
         public string Usuario { get; set; }
-        [Display(Name = "Contraseña")]
+        [Display(Name = "Contraseña"), DataType(DataType.Password)]
         public string Contrasena { get; set; }
         public string Tipo { get; set; }
     }

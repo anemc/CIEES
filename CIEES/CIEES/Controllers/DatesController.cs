@@ -6,12 +6,12 @@ using System.Web.Mvc;
 
 namespace CIEES.Controllers
 {
-    public class HomeController : Controller
+    public class DatesController : Controller
     {
-        public ActionResult Index()
+        // GET: Dates
+        public ActionResult Fechas()
         {
-            var db = Utils.CIEESContext;
-            db.Tables.Add(new Models.Tables { Nombre = "T111" });
+            
             return View();
         }
     }

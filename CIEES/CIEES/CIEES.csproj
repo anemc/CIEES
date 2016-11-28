@@ -136,7 +136,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DatesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OtrasController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Dal\MyDbContext.cs" />
     <Compile Include="Dal\MyDbInitializer.cs" />
@@ -223,6 +225,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Imagenes\logo.jpg" />
     <Content Include="Js\login.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -253,13 +256,14 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Users\Nuevo.cshtml" />
     <Content Include="Views\Users\Lista.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Otras\Autoevaluacion.cshtml" />
+    <Content Include="Views\Users\Nuevo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Css\" />
+    <Folder Include="Views\Dates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

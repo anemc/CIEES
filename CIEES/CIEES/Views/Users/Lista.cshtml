@@ -3,17 +3,15 @@
 @{
     ViewBag.Title = "Lista";
 }
+<h2>Lista de Usuarios</h2>
 
-<h2>Lista</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+    <p style="text-align:right">
+        @Html.ActionLink("Nuevo Usuario", "Nuevo")
+    </p>
+<table class="table" id="customers">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Nombre)
-            Nombre
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ApellidoP)
@@ -62,4 +60,3 @@
 }
 
 </table>
-
