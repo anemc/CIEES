@@ -11,6 +11,10 @@ namespace CIEES.Controllers
         // GET: Otras
         public ActionResult Autoevaluacion()
         {
+            if (Session["User"] == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
     }

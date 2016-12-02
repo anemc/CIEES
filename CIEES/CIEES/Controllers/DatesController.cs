@@ -12,6 +12,10 @@ namespace CIEES.Controllers
         // GET: Dates
         public ActionResult Fechas()
         {
+            if (Session["User"] == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
 

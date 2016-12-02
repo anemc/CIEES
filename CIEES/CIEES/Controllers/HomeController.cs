@@ -10,9 +10,20 @@ namespace CIEES.Controllers
     {
         public ActionResult Index()
         {
+            if (Session["User"] != null)
+            {
+                return RedirectToAction("Autoevaluacion", "Otras");
+            }
             var db = Utils.CIEESContext;
             db.Tables.Add(new Models.Tables { Nombre = "T111" });
             return View();
+        }
+
+        public ActionResult Logout()
+        {
+            Session["User"] = null;
+            Session["Type"] = null;
+            return RedirectToAction("Index", "Home");
         }
     }
 }

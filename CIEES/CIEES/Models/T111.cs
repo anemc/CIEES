@@ -15,6 +15,7 @@ namespace CIEES.Models
         public string Mision { get; set; }      //sin contador
         public string Vision { get; set; }      //sin contador
         public string Objetivos { get; set; }   //sin contador
+        [DataType(DataType.DateTime)]
         public DateTime F_Aprob { get; set; }   //sin contador
         public string Resp1 { get; set; }
         public string Resp2 { get; set; }
