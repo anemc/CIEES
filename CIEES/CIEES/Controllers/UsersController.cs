@@ -142,7 +142,7 @@ namespace CIEES.Controllers
             if (ModelState.IsValid)
             {
                 var db = Utils.CIEESContext;
-                var d = db.Users.Find(new object[] { u.UsuarioId });
+                var d = db.Users.Find(u.UsuarioId);
                 d.Contrasena = u.Contrasena;
                 db.SaveChanges();
                 return RedirectToAction("Lista");
