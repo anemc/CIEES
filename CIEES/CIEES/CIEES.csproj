@@ -136,6 +136,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArchivosController.cs" />
     <Compile Include="Controllers\DatesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OtrasController.cs" />
@@ -267,9 +268,12 @@
     <Content Include="Views\Users\Editar.cshtml" />
     <Content Include="Views\Users\Modpass.cshtml" />
     <Content Include="Views\T111\Index.cshtml" />
+    <Content Include="Views\Archivos\Subir.cshtml" />
+    <Content Include="Views\Archivos\Ver.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\imagenes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -1,9 +1,7 @@
 ﻿@model CIEES.Models.T111
-
 @{
     ViewBag.Title = "T1.1.1";
 }
-
 <center>
     <h1>EJE 1. Fundamentos y condiciones de operación</h1>
     <h2>Categoría 1. Propósitos del programa Misión y visión</h2>
@@ -100,13 +98,33 @@
                 •	Ejemplos de los medios de comunicación interna y externa de la misión y de la visión (por ejemplo, folletos, carteles, trípticos, sitio web, etcétera).
             </p>
         </div>
+       <!-- @{
+            /*string b = "~/Content/Informatica/Eje1/Cat1/T111";
+            DirectoryInfo dirInfo = new DirectoryInfo(Server.MapPath(b));
+            List<FileInfo> files = dirInfo.GetFiles().ToList();
+            var n;
+            @:<table>
+                @foreach (FileInfo file in n)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => file.Name)</td>
+                        <td>
+                            @Html.ActionLink("Eliminar Archivo", "Delete", new { id = file.FullName })
+                        </td>
+                    </tr>
+                }
+            @:</table>*/
+        }-->
+        
+        @Html.ActionLink("Ver Archivos", "Ver", new { controller = "Archivos" }, new { target = "_new" })
+        @Html.ActionLink("Subir Archivos", "Subir", new { controller = "Archivos" }, new { target = "_new" })
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Guardar" class="btn btn-primary" />
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Guardar" class="btn btn-primary" />
+                </div>
             </div>
-        </div>
-    </div>
+</div>
 }
 
 <div>

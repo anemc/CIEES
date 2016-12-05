@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@if (ViewBag.ShouldClose)
+{
+    <script type="text/javascript">
+        window.close();
+    </script>
+}
+<h2>subir archivo</h2>
+
+@using (Html.BeginForm("Subir", "Archivos", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table>
+        <tr>
+            <td>archivo </td>
+            <td><input type="file" name="files" id="Files" multiple />  </td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="submit" value="upload" /></td>
+        </tr>
+    </table>
+}
+

@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Lista de Archivos";
+}
+<script>
+    function myFunction() {
+        window.close();
+    }
+</script>
+<h2>Lista de Archivos</h2>
+
+<table>
+    @foreach (FileInfo file in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => file.Name)</td>
+            <td>
+                @{ 
+                    Session["FileName"] = file.Name.ToString();
+                }
+                @Html.ActionLink("Eliminar Archivo", "Eliminar")
+            </td>
+        </tr>
+    }
+</table>
+<br /><br /><br />
+<button class="btn btn-primary" onclick="myFunction()">Volver</button>

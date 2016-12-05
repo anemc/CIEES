@@ -1,6 +1,7 @@
 ﻿using CIEES.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -22,6 +23,7 @@ namespace CIEES.Controllers
             {
                 return HttpNotFound();
             }
+            Session["Ruta"] = "~/Content/Informatica/Eje1/Cat1/T111";
             return View(d);
         }
         [HttpPost]

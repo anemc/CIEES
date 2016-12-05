@@ -144,7 +144,6 @@ namespace CIEES.Controllers
                 var db = Utils.CIEESContext;
                 var d = db.Users.Find(new object[] { u.UsuarioId });
                 d.Contrasena = u.Contrasena;
-                d.Nombre = u.Nombre;
                 db.SaveChanges();
                 return RedirectToAction("Lista");
             }
