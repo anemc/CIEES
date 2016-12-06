@@ -137,15 +137,24 @@ namespace CIEES.Controllers
             return View(d);
         }
         [HttpPost]
-        public ActionResult Modpass(Users u)
+        public ActionResult Modpass(Users u, string NueCon, string Conf)
         {
             if (ModelState.IsValid)
             {
                 var db = Utils.CIEESContext;
                 var d = db.Users.Find(new object[] { u.UsuarioId });
-                d.Contrasena = u.Contrasena;
-                db.SaveChanges();
-                return RedirectToAction("Lista");
+                if(d.Contrasena == u.Contrasena && NueCon == Conf)
+                {
+                    d.Contrasena = NueCon;
+                    db.SaveChanges();
+                    return RedirectToAction("Lista");
+                }
+                else
+                {
+                    return Content("Contraseña incorrecta o no son iguales");
+                }
+                
+                
             }
             return View(u);
         }
@@ -163,7 +172,7 @@ namespace CIEES.Controllers
             Session["User"] = user.Usuario;
             Session["Type"] = user.Tipo;
             Session["Id"] = user.UsuarioId;
-            return RedirectToAction("Autoevaluacion", "Otras");
+            return RedirectToAction("Inicio", "Home");
         }
     }
 }

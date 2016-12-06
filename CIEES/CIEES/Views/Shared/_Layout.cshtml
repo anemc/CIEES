@@ -6,30 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - CIEES</title>
     @Styles.Render("~/Content/css")
-    @Styles.Render("~/Css/css")
     @Scripts.Render("~/bundles/modernizr")
     <script type="text/javascript" src="~/Js/login.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
         <center><img src="~/Imagenes/logo.jpg" style="width:40%;" /></center>
         <div class="navbar navbar-inverse ">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Autoevaluación", "Autoevaluacion", "Otras")</li>
-                        <li>@Html.ActionLink("Intervalos de Actividades", "Fechas", "Dates")</li>
-                        <li>@Html.ActionLink("Control de Usuarios", "Lista", "Users")</li>
-                        <li>@Html.ActionLink("Cambiar Contraseña", "Modpass/" + Session["Id"], "Users")</li>
-                        <li>@Html.ActionLink("" + Session["User"].ToString(), "Logout", "Home")</li>
-                    </ul>
-                </div>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="@Url.Action("Inicio", "Home")">Inicio</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Autoevaluación", "Autoevaluacion", "Otras")</li>
+                            <li>@Html.ActionLink("Intervalos de Actividades", "Fechas", "Dates")</li>
+                            <li>@Html.ActionLink("Control de Usuarios", "Lista", "Users")</li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="background-color:#55a73d"><span class="glyphicon glyphicon-user"></span>  @Session["User"].ToString()<span class="caret"></span></a>
+                                <ul class="dropdown-menu" style="">
+                                    <li>@Html.ActionLink("Cambiar Contraseña", "Modpass/" + Session["Id"], "Users")</li>
+                                    <li>@Html.ActionLink("Cerrar Sesión", "Logout", "Home")</li>
+                                </ul>
+                        </ul>
+                    </div>
             </div>
         </div>
         <div class="container body-content">

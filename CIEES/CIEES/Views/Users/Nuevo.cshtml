@@ -1,4 +1,12 @@
 ﻿@model CIEES.Models.Users
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/i18n/defaults-*.min.js"></script>
 
 @{
     ViewBag.Title = "Usuario Nuevo";
@@ -9,21 +17,21 @@
 @using (Html.BeginForm("Guardar", "Users", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <hr />
+    <hr />
+    <div class="form-horizontal" style="margin-left:30%">
+       
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control", required = "required", autocomplete = "off" } })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.ApellidoP, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ApellidoP, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.ApellidoP, new { htmlAttributes = new { @class = "form-control", required = "required", autocomplete = "off" } })
                 @Html.ValidationMessageFor(model => model.ApellidoP, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -31,7 +39,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ApellidoM, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ApellidoM, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.ApellidoM, new { htmlAttributes = new { @class = "form-control", required = "required", autocomplete = "off" } })
                 @Html.ValidationMessageFor(model => model.ApellidoM, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -39,7 +47,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Usuario, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Usuario, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Usuario, new { htmlAttributes = new { @class = "form-control", required = "required", autocomplete = "off" } })
                 @Html.ValidationMessageFor(model => model.Usuario, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -47,7 +55,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Contrasena, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Contrasena, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Contrasena, new { htmlAttributes = new { @class = "form-control", required = "required", autocomplete = "off" } })
                 @Html.ValidationMessageFor(model => model.Contrasena, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -55,7 +63,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Correo, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control", required = "required", autocomplete = "off" } })
                 @Html.ValidationMessageFor(model => model.Correo, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -63,19 +71,21 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Tipo, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Tipo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownList("Tipo",
+                    new List<SelectListItem>
+                    {
+                        new SelectListItem { Text = "Admin", Value = "Admin" },
+                        new SelectListItem { Text = "Académico",  Value = "Academico" },
+                    }, new { @class = "selectpicker" })
                 @Html.ValidationMessageFor(model => model.Tipo, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Crear Usuario" class="btn btn-default" />
+                <input type="button" value="Volver" class="btn btn-success" onclick="location.href='@Url.Action("Lista", "Users")'" /> |
+                <input type="submit" value="Guardar" class="btn btn-primary" />
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Volver", "Lista")
-</div>

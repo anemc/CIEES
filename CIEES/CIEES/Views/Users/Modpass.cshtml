@@ -5,26 +5,35 @@
 }
 
 <center><h2>Modificar Contraseña</h2></center>
-
-<div>
-    <hr />
-    <dl class="dl-horizontal">
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Usuario)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Usuario)
-        </dd>
-    </dl>
-</div>
+<hr />
 @using (Html.BeginForm("Modpass", "Users", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-    <div class="form-group">
-        @Html.LabelFor(model => model.Contrasena, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Contrasena, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Contrasena, "", new { @class = "text-danger" })
+    <div class="form-group" style="margin-left:30%">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control", autocomplete = "off", required = "required", disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })<br />
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Contrasena, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Contrasena, new { htmlAttributes = new { @class = "form-control", required = "required", autocomplete = "off" } })
+                @Html.ValidationMessageFor(model => model.Contrasena, "", new { @class = "text-danger" })<br />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Nueva Contraseña</label>
+            <div class="col-md-10">
+                <input type="password" class="form-control" id="NueCon" name="NueCon" required autocomplete="off" /><br />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Confirmar Contraseña</label>
+            <div class="col-md-10">
+                <input type="password" class="form-control" id="Conf" name="Conf" required autocomplete="off" /><br />
+            </div>
         </div>
     </div>
         <div class="form-group" hidden>
@@ -35,13 +44,11 @@
                 @Html.ValidationMessageFor(model => model.UsuarioId, "", new { @class = "text-danger" })
             </div>
         </div>
-        
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Guardar" class="btn btn-primary" />
+        <br />
+        <center>
+            <div>
+                <input type="button" value="Volver" class="btn btn-success" onclick="location.href='@Url.Action("Lista", "Users")'" /> |
+                <input type="submit" value="Cambiar" class="btn btn-primary" />
             </div>
-        </div>
+        </center><br />
 }
-<p>
-    @Html.ActionLink("Volver", "Lista")
-</p>

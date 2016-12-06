@@ -5,9 +5,9 @@
 }
 
 <center><h2>Detalles de Usuario</h2></center>
-
-<div>
-    <hr />
+<hr />
+<div style="margin-left:35%">
+    
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Nombre)
@@ -58,8 +58,11 @@
         </dd>
 
     </dl>
+    <div class="form-group">
+        <div class="col-md-offset-1 col-md-10">
+            <input type="button" value="Volver" class="btn btn-success" onclick="location.href='@Url.Action("Lista", "Users")'" /> |
+            <input type="button" value="Editar" class="btn btn-primary" onclick="location.href='@Url.Action("Editar", "Users",new { id = Model.UsuarioId })'" />
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Editar", "Editar", new { id = Model.UsuarioId }) |
-    @Html.ActionLink("Volver", "Lista")
-</p>
+<br />

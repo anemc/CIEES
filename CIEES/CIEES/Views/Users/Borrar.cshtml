@@ -6,8 +6,8 @@
 
 
 <center><h3>Estas seguro que deseas eliminar este usuario?</h3></center>
-<div>
-    <hr />
+<hr /><div style="margin-left:30%">
+    
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Nombre)
@@ -69,10 +69,12 @@
 
     @using (Html.BeginForm("Borrar", "Users", FormMethod.Post, new { enctype = "multipart/form-data" })) {
         @Html.AntiForgeryToken()
-
-            <div class="form-actions no-color" style="margin-left:0%">
-                <input type="submit" value="Eliminar" class="btn btn-link" /> |
-                @Html.ActionLink("Volver", "Lista")
+        
+            <div class="form-actions no-color col-md-offset-1 col-md-10">
+                <input type="button" value="Volver" class="btn btn-success" onclick="location.href='@Url.Action("Lista", "Users")'" /> |
+                <input type="submit" value="Eliminar" class="btn btn-primary" />
             </div>
     }
 </div>
+
+<br />

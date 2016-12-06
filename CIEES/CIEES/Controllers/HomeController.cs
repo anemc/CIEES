@@ -23,7 +23,16 @@ namespace CIEES.Controllers
         {
             Session["User"] = null;
             Session["Type"] = null;
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Inicio", "Home");
+        }
+
+        public ActionResult Inicio()
+        {
+            if (Session["User"] == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            return View();
         }
     }
 }

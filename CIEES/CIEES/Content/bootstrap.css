@@ -4208,8 +4208,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   padding: 15px 15px;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: large;
+  font-weight:bold;
+  color:white;
 }
 
 .navbar-brand:hover,
@@ -4520,7 +4521,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-brand {
-  color: #999999;
+  color: white;
 }
 
 .navbar-inverse .navbar-brand:hover,
@@ -4581,7 +4582,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
   color: #ffffff;
-  background-color: #080808;
+  background-color: #8546bf;
 }
 
 .navbar-inverse .navbar-nav > .dropdown > a:hover .caret {
@@ -4606,7 +4607,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     border-color: #080808;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-    color: #999999;
+    color: #000;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -6027,6 +6028,7 @@ body.modal-open,
   position: relative;
   width: 100%;
   overflow: hidden;
+  background-color: #84A6FF;
 }
 
 .carousel-inner > .item {
@@ -6118,7 +6120,7 @@ body.modal-open,
 
 .carousel-control:hover,
 .carousel-control:focus {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   opacity: 0.9;
   filter: alpha(opacity=90);

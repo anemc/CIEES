@@ -1,4 +1,5 @@
 ﻿using CIEES.Models;
+using Rotativa;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,8 +12,9 @@ namespace CIEES.Controllers
     public class T111Controller : Controller
     {
         // GET: T111
-        public ActionResult Index(int id)
+        public ActionResult Index(int id, bool pdf = false)
         {
+            Session["Pdf"] = 1;
             if (Session["User"] == null)
             {
                 return RedirectToAction("Index", "Home");
@@ -46,6 +48,21 @@ namespace CIEES.Controllers
                 return RedirectToAction("Index", "T111");
             }
             return View(u);
+        }
+
+        public ActionResult ExportaPDF()
+        {
+
+            var root = Server.MapPath("~/Content/Pdfs");
+            var pdfName = "Indicador 1.1.1.pdf";
+            var path = System.IO.Path.Combine(root, pdfName);
+            path = System.IO.Path.GetFullPath(path);
+            Session["Pdf"] = 0;
+            return new ViewAsPdf("Index")
+            {
+                SaveOnServerPath = path
+            };
+
         }
     }
 }

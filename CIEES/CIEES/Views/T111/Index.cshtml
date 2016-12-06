@@ -2,6 +2,32 @@
 @{
     ViewBag.Title = "T1.1.1";
 }
+<script>
+    refreshCounts = function (value) {
+        value = value || '';
+        var wordCount = 0;
+        if (value.length != 0) {
+
+            var regex = /\s+/gi;
+            wordCount = value.trim().replace(regex, ' ').split(' ').length;
+        }
+        $('#Resp').html('');
+        if (wordCount > 5) {
+            $('#Resp').append('PALABRAS: ' + wordCount + ' Te pasaste del maximo');
+        }
+        else {
+            $('#Resp').append('PALABRAS: ' + wordCount);
+        }
+    }
+
+    refreshCounts($('#Mision').val()); //draw in load document
+    /*capture functions
+    change, keypress,keyup,blur,focus
+    */
+    $('#Mision').keyup(function () {
+        refreshCounts($(this).val())
+    });
+</script>
 <center>
     <h1>EJE 1. Fundamentos y condiciones de operación</h1>
     <h2>Categoría 1. Propósitos del programa Misión y visión</h2>
@@ -11,7 +37,7 @@
 @using (Html.BeginForm("Index", "T111", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -26,6 +52,7 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Mision, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Mision, "", new { @class = "text-danger" })
+                <div id="Resp"></div>
             </div>
         </div>
 
@@ -98,35 +125,18 @@
                 •	Ejemplos de los medios de comunicación interna y externa de la misión y de la visión (por ejemplo, folletos, carteles, trípticos, sitio web, etcétera).
             </p>
         </div>
-       <!-- @{
-            /*string b = "~/Content/Informatica/Eje1/Cat1/T111";
-            DirectoryInfo dirInfo = new DirectoryInfo(Server.MapPath(b));
-            List<FileInfo> files = dirInfo.GetFiles().ToList();
-            var n;
-            @:<table>
-                @foreach (FileInfo file in n)
-                {
-                    <tr>
-                        <td>@Html.DisplayFor(model => file.Name)</td>
-                        <td>
-                            @Html.ActionLink("Eliminar Archivo", "Delete", new { id = file.FullName })
-                        </td>
-                    </tr>
-                }
-            @:</table>*/
-        }-->
-        
-        @Html.ActionLink("Ver Archivos", "Ver", new { controller = "Archivos" }, new { target = "_new" })
-        @Html.ActionLink("Subir Archivos", "Subir", new { controller = "Archivos" }, new { target = "_new" })
-
+@if (Session["Pdf"].Equals(1))
+{
+    
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Guardar" class="btn btn-primary" />
+                    <button type="button" class="btn btn-primary" onclick="window.open('@Url.Action("Ver", "Archivos", new { id=1})', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes')">Ver Archivos</button> |
+                    <button type="button" class="btn btn-primary" onclick="window.open('@Url.Action("Subir", "Archivos", new { id=1})', '_blank', 'location=yes,height=300,width=520,top=100, left=100,scrollbars=yes,status=yes')">Subir Archivos</button> |
+                    <input type="submit" value="Guardar" class="btn btn-primary" /> |
+                    <input type="button" value="Volver" class="btn btn-success" onclick="location.href='@Url.Action("Autoevaluacion", "Otras")'" /> |
+                    <input type="button" value="Exportar PDF" class="btn btn-danger" onclick="location.href='@Url.Action("ExportaPDF", "T111")'" />
                 </div>
             </div>
+}
 </div>
 }
-
-<div>
-    @Html.ActionLink("Volver", "Autoevaluacion", "Otras")
-</div>

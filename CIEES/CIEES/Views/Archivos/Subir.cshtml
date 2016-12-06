@@ -1,7 +1,15 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    Layout = "";
+    ViewBag.Title = "Subir Archivos";
 }
 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@ViewBag.Title - CIEES</title>
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+<script type="text/javascript" src="~/Js/login.js"></script>
 @if (ViewBag.ShouldClose)
 {
     <script type="text/javascript">
@@ -23,3 +31,5 @@
     </table>
 }
 
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
