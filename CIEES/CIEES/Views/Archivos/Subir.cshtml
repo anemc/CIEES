@@ -16,20 +16,36 @@
         window.close();
     </script>
 }
-<h2>subir archivo</h2>
-
+<center><img src="~/Imagenes/logo.jpg" style="width:40%;" /></center>
+<center><h2>Subir archivo</h2></center>
+<hr />
 @using (Html.BeginForm("Subir", "Archivos", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-    <table>
-        <tr>
-            <td>archivo </td>
-            <td><input type="file" name="files" id="Files" multiple />  </td>
-        </tr>
-        <tr>
-            <td><input type="submit" name="submit" value="upload" /></td>
-        </tr>
-    </table>
+    
+<center>
+    <div style="text-align:justify; width:80%">
+        <p>
+            Desde aqui puede subir los archivos que se relacionen al punto anterior, los archivos deben tener un nombre adecuado como: "T1.1.1-Lista de Tutores.pdf"; de esta forma sera mas facil para el administrador la recopilacion de los documentos.
+            Puede seleccionar mas de un archivo a la vez.
+        </p>
+    </div>
+        <table style="width:80%">
+            <tr @*style="background-color:aqua"*@>
+                <td><input type="file" name="files" id="Files" multiple />  </td>
+            </tr>
+            <tr>
+                <td><input class="btn btn-primary" type="submit" name="submit" value="Subir Archivo" /></td>
+            </tr>
+        </table>
+    </center>
 }
+
+<div class="container body-content">
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Moguel - Rosas - Trinidad</p>
+    </footer>
+</div>
 
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")

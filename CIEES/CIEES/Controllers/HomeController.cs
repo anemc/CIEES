@@ -15,7 +15,7 @@ namespace CIEES.Controllers
                 return RedirectToAction("Autoevaluacion", "Otras");
             }
             var db = Utils.CIEESContext;
-            db.Tables.Add(new Models.Tables { Nombre = "T111" });
+            db.Pdfs.Add(new Models.Pdfs { Nombre = "T111" });
             return View();
         }
 
@@ -23,6 +23,8 @@ namespace CIEES.Controllers
         {
             Session["User"] = null;
             Session["Type"] = null;
+            Session["Id"] = null;
+            Session["Ruta"] = null;
             return RedirectToAction("Inicio", "Home");
         }
 

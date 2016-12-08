@@ -9,7 +9,7 @@ namespace CIEES.Dal
     {
         protected override void Seed(MyDbContext context)
         {
-            context.Users.Add(new Models.Users() { Nombre = "Diana", ApellidoP = "Montejo", ApellidoM = "Arroyo", Usuario = "anemce", Contrasena = "123456", Correo = "diana@uv.com", Tipo = "admin" });
+            context.Users.Add(new Models.Users() { Nombre = "Diana", ApellidoP = "Montejo", ApellidoM = "Arroyo", Usuario = "anemce", Contrasena = "123456", Correo = "diana@uv.com", Tipo = "Admin" });
             /*context.Tables.Add(new Models.Tables() { Nombre = "T111" });
             context.Tables.Add(new Models.Tables() { Nombre = "T112" });
             context.Tables.Add(new Models.Tables() { Nombre = "T113" });
@@ -78,7 +78,7 @@ namespace CIEES.Dal
             context.Tables.Add(new Models.Tables() { Nombre = "T4124" });
             context.Tables.Add(new Models.Tables() { Nombre = "T4125" });
             context.Tables.Add(new Models.Tables() { Nombre = "T4126" });*/
-            context.T111.Add(new Models.T111() { F_Mod = DateTime.Now });
+            context.T111.Add(new Models.T111() { UsuarioId = 1 });
             context.SaveChanges();
             base.Seed(context);
         }

@@ -16,6 +16,10 @@ namespace CIEES.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
+            if (Session["Type"].Equals("Academico"))
+            {
+                return RedirectToAction("Inicio", "Home");
+            }
             return View();
         }
 

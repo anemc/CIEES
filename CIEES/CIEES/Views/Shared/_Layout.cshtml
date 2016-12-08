@@ -27,8 +27,11 @@
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li>@Html.ActionLink("Autoevaluación", "Autoevaluacion", "Otras")</li>
+                            @if (Session["Type"].Equals("Admin"))
+                            {
                             <li>@Html.ActionLink("Intervalos de Actividades", "Fechas", "Dates")</li>
                             <li>@Html.ActionLink("Control de Usuarios", "Lista", "Users")</li>
+                            }
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown">

@@ -16,6 +16,10 @@ namespace CIEES.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
+            if (Session["Type"].Equals("Academico"))
+            {
+                return RedirectToAction("Inicio", "Home");
+            }
             return View();
         }
 
@@ -39,6 +43,10 @@ namespace CIEES.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
+            if (Session["Type"].Equals("Academico"))
+            {
+                return RedirectToAction("Inicio", "Home");
+            }
             var db = Utils.CIEESContext;
             //var m = from x in Utils.CIEESContext.Users select x;
             return View(db.Users.ToList());
@@ -49,6 +57,10 @@ namespace CIEES.Controllers
             if (Session["User"] == null)
             {
                 return RedirectToAction("Index", "Home");
+            }
+            if (Session["Type"].Equals("Academico"))
+            {
+                return RedirectToAction("Inicio", "Home");
             }
             var db = Utils.CIEESContext;
             var d = db.Users.Find(id);
@@ -64,6 +76,10 @@ namespace CIEES.Controllers
             if (Session["User"] == null)
             {
                 return RedirectToAction("Index", "Home");
+            }
+            if (Session["Type"].Equals("Academico"))
+            {
+                return RedirectToAction("Inicio", "Home");
             }
             var db = Utils.CIEESContext;
             var d = db.Users.Find(id);
@@ -99,6 +115,10 @@ namespace CIEES.Controllers
             if (Session["User"] == null)
             {
                 return RedirectToAction("Index", "Home");
+            }
+            if (Session["Type"].Equals("Academico"))
+            {
+                return RedirectToAction("Inicio", "Home");
             }
             var db = Utils.CIEESContext;
             var d = db.Users.Find(id);

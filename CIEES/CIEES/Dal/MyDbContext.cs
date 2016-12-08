@@ -23,9 +23,9 @@ namespace CIEES.Dal
         }
 
         public DbSet<Users> Users { get; set; }
-        public DbSet<Tables> Tables { get; set; }
+        //public DbSet<Tables> Tables { get; set; }
         public DbSet<Dates> Dates{ get; set; }
-        public DbSet<Files> Files { get; set; }
+        //public DbSet<Files> Files { get; set; }
         public DbSet<Pdfs> Pdfs { get; set; }
         public DbSet<T111> T111 { get; set; }
         public DbSet<T112> T112 { get; set; }
